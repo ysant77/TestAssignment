@@ -33,7 +33,7 @@ public abstract class Car {
     }
 
     public void refuel() {
-        System.out.println("Refueling");
+        //System.out.println("Refueling");
         this.energy.recharge();
     }
 

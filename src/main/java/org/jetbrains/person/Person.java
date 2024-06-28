@@ -44,10 +44,10 @@ public class Person {
 
 
         if (car.needsEnergy(destinationLocation)){
-            System.out.println("Needs energy");
+            //System.out.println("Needs energy");
             addEnergy();
         }
-        System.out.println("Drive to "+destinationLocation+". Current location "+ car.getLocation()+". Energy "+ car.getEnergyValue());
+        //System.out.println("Drive to "+destinationLocation+". Current location "+ car.getLocation()+". Energy "+ car.getEnergyValue());
 
         car.driveTo(destinationLocation);
     }
@@ -61,7 +61,7 @@ public class Person {
             GasStation gasStation =  StationsPool.getInstance().getClosestGasStation(car);
             destination = gasStation.getLocation();
         }
-        System.out.println("Drive to "+destination+". Current location "+ car.getLocation()+". Energy "+ car.getEnergyValue());
+        //System.out.println("Drive to "+destination+". Current location "+ car.getLocation()+". Energy "+ car.getEnergyValue());
         car.driveTo(destination);
         car.refuel();
     }
