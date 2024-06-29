@@ -4,10 +4,36 @@ import org.jetbrains.car.*;
 import org.jetbrains.person.Person;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import com.google.gson.Gson; // Google JSON library
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+ class RunResult {
+    private Chromosome bestChromosome;
+    private double bestFitness;
+    private int bestGeneration;
+
+    public RunResult(Chromosome bestChromosome, double bestFitness, int bestGeneration) {
+        this.bestChromosome = bestChromosome;
+        this.bestFitness = bestFitness;
+        this.bestGeneration = bestGeneration;
+    }
+
+    // Getters and setters if necessary
+}
+
 
 class Chromosome {
     double location;
@@ -40,6 +66,66 @@ class GeneticAlgorithm {
     private int bestGeneration = 0;
     private int generationCount = 0;
     private TestTemplates testTemplates = new TestTemplates();
+    private boolean useJson;
+    private String resultFilename;
+
+    public double getBestFitnessEver() {
+        return bestFitnessEver;
+    }
+    public int getBestGeneration() {
+        return bestGeneration;
+    }
+    public Chromosome getBestChromosomeEver() {
+        return bestChromosomeEver;
+    }
+
+    public void initialize(boolean useJsonFlag) {
+        this.useJson = useJsonFlag;
+        this.resultFilename = useJson ? "result_from_ML.json" : "result_from_random.json";
+        if (useJson) {
+            initializePopulationFromJson();
+        } else {
+            initializePopulation();
+        }
+    }
+
+   private void initializePopulationFromJson() {
+    try {
+        // Read JSON content from file
+        String jsonContent = new String(Files.readAllBytes(Paths.get("/home/yatharth/TestAssignment/app/initial_population.json")));
+
+        // Create Gson instance
+        Gson gson = new Gson();
+        
+        // Deserialize JSON to an array of JsonElement
+        JsonElement jsonElement = gson.fromJson(jsonContent, JsonElement.class);
+        JsonArray jsonArray = jsonElement.getAsJsonArray();
+
+        // Clear existing population
+        population = new ArrayList<>();
+        
+        // Iterate over JSON array to create Chromosome instances
+        for (JsonElement element : jsonArray) {
+            JsonObject obj = element.getAsJsonObject();
+
+            // Read each property from the JSON object
+            double location = obj.get("initial_car_location").getAsDouble();
+            double energyUsageRate = obj.get("car_energy_usage_rate").getAsDouble();
+            int age = obj.get("person_age").getAsInt();
+            double homeLocation = obj.get("home_location").getAsDouble();
+            double workLocation = obj.get("work_location").getAsDouble();
+
+            // Create a new Chromosome instance and add to population
+            Chromosome chromosome = new Chromosome(location, energyUsageRate, age, homeLocation, workLocation);
+            population.add(chromosome);
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+        // Fallback to random initialization if any error occurs
+        initializePopulation(); 
+    }
+}
+
     public void initializePopulation() {
         for (int i = 0; i < POPULATION_SIZE; i++) {
             double location = Math.min(100, Math.max(0, random.nextDouble() * 100));
@@ -151,7 +237,7 @@ class GeneticAlgorithm {
     
 
     public void run() {
-        initializePopulation();
+        //initializePopulation();
         long startTime = System.currentTimeMillis();
         while ((System.currentTimeMillis() - startTime) < 30000) { // 30 seconds
             evaluatePopulation();  // Evaluate each new generation
@@ -167,9 +253,33 @@ class GeneticAlgorithm {
             generationCount++;
         }
 
-        System.out.println("Best Ever Fitness: " + bestFitnessEver + " from Generation " + bestGeneration);
-        System.out.println("Best Ever Chromosome: " + bestChromosomeEver);
-        System.out.println("Test Result: " + bestChromosomeEver.testResult);
+        //System.out.println("Best Ever Fitness: " + bestFitnessEver + " from Generation " + bestGeneration);
+        //System.out.println("Best Ever Chromosome: " + bestChromosomeEver);
+        //System.out.println("Test Result: " + bestChromosomeEver.testResult);
+        //saveResults();
+    }
+
+    private void saveResults() {
+        Gson gson = new Gson();
+        String resultJson = gson.toJson(bestChromosomeEver);
+        try {
+            Files.write(Paths.get(resultFilename), resultJson.getBytes());
+            System.out.println("Best Ever Fitness: " + bestFitnessEver + " from Generation " + bestGeneration);
+            System.out.println("Results saved to " + resultFilename);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveAllResults(List<RunResult> results){
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String allResultsJson = gson.toJson(results);
+        try {
+            Files.write(Paths.get(resultFilename), allResultsJson.getBytes());
+            System.out.println("All results saved to " + resultFilename);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

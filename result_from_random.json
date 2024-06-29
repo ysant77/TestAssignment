@@ -1,0 +1,322 @@
+[
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 51,
+      "homeLocation": 24.55290667674864,
+      "workLocation": 68.28603945171405,
+      "fitness": 79.44709332325138,
+      "testResult": {
+        "location": 24.55290667674864,
+        "energy": 179.44709332325138
+      }
+    },
+    "bestFitness": 79.44709332325138,
+    "bestGeneration": 23
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 51,
+      "homeLocation": 24.55290667674864,
+      "workLocation": 68.28603945171405,
+      "fitness": 79.44709332325138,
+      "testResult": {
+        "location": 24.55290667674864,
+        "energy": 179.44709332325138
+      }
+    },
+    "bestFitness": 79.44709332325138,
+    "bestGeneration": 23
+  },
+  {
+    "bestChromosome": {
+      "location": 37.53921496602948,
+      "energyUsageRate": 1.0,
+      "age": 53,
+      "homeLocation": 4.893291717458043,
+      "workLocation": 86.04589767048284,
+      "fitness": 86.10670828254194,
+      "testResult": {
+        "location": 4.893291717458043,
+        "energy": 186.10670828254194
+      }
+    },
+    "bestFitness": 86.10670828254194,
+    "bestGeneration": 670310
+  },
+  {
+    "bestChromosome": {
+      "location": 37.53921496602948,
+      "energyUsageRate": 1.0,
+      "age": 53,
+      "homeLocation": 4.893291717458043,
+      "workLocation": 86.04589767048284,
+      "fitness": 86.10670828254194,
+      "testResult": {
+        "location": 4.893291717458043,
+        "energy": 186.10670828254194
+      }
+    },
+    "bestFitness": 86.10670828254194,
+    "bestGeneration": 670310
+  },
+  {
+    "bestChromosome": {
+      "location": 37.53921496602948,
+      "energyUsageRate": 1.0,
+      "age": 53,
+      "homeLocation": 4.893291717458043,
+      "workLocation": 86.04589767048284,
+      "fitness": 86.10670828254194,
+      "testResult": {
+        "location": 4.893291717458043,
+        "energy": 186.10670828254194
+      }
+    },
+    "bestFitness": 86.10670828254194,
+    "bestGeneration": 670310
+  },
+  {
+    "bestChromosome": {
+      "location": 37.53921496602948,
+      "energyUsageRate": 1.0,
+      "age": 53,
+      "homeLocation": 4.893291717458043,
+      "workLocation": 86.04589767048284,
+      "fitness": 86.10670828254194,
+      "testResult": {
+        "location": 4.893291717458043,
+        "energy": 186.10670828254194
+      }
+    },
+    "bestFitness": 86.10670828254194,
+    "bestGeneration": 670310
+  },
+  {
+    "bestChromosome": {
+      "location": 37.53921496602948,
+      "energyUsageRate": 1.0,
+      "age": 53,
+      "homeLocation": 4.893291717458043,
+      "workLocation": 86.04589767048284,
+      "fitness": 86.10670828254194,
+      "testResult": {
+        "location": 4.893291717458043,
+        "energy": 186.10670828254194
+      }
+    },
+    "bestFitness": 86.10670828254194,
+    "bestGeneration": 670310
+  },
+  {
+    "bestChromosome": {
+      "location": 37.53921496602948,
+      "energyUsageRate": 1.0,
+      "age": 53,
+      "homeLocation": 4.893291717458043,
+      "workLocation": 86.04589767048284,
+      "fitness": 86.10670828254194,
+      "testResult": {
+        "location": 4.893291717458043,
+        "energy": 186.10670828254194
+      }
+    },
+    "bestFitness": 86.10670828254194,
+    "bestGeneration": 670310
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  },
+  {
+    "bestChromosome": {
+      "location": 100.0,
+      "energyUsageRate": 1.0,
+      "age": 52,
+      "homeLocation": 11.290438222210962,
+      "workLocation": 41.53960657484725,
+      "fitness": 92.70956177778902,
+      "testResult": {
+        "location": 11.290438222210962,
+        "energy": 192.70956177778902
+      }
+    },
+    "bestFitness": 92.70956177778902,
+    "bestGeneration": 2733666
+  }
+]

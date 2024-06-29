@@ -1,0 +1,322 @@
+[
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 22.353005789155745,
+      "energyUsageRate": 1.0,
+      "age": 27,
+      "homeLocation": 2.25,
+      "workLocation": 97.75,
+      "fitness": 94.75,
+      "testResult": {
+        "location": 2.25,
+        "energy": 194.75
+      }
+    },
+    "bestFitness": 94.75,
+    "bestGeneration": 3
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  },
+  {
+    "bestChromosome": {
+      "location": 3.6339973290178804,
+      "energyUsageRate": 1.0,
+      "age": 25,
+      "homeLocation": 2.0,
+      "workLocation": 98.0,
+      "fitness": 95.0,
+      "testResult": {
+        "location": 2.0,
+        "energy": 195.0
+      }
+    },
+    "bestFitness": 95.0,
+    "bestGeneration": 1518318
+  }
+]
