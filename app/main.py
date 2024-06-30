@@ -59,27 +59,7 @@ app = FastAPI()
 # """
 
 
-API_URL = "https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1"
-#API_URL = "https://api-inference.huggingface.co/models/google/gemma-2b-it"
 
-headers = {"Authorization": f"Bearer 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"}
-
-def fetch_from_huggingface(prompt):
-    
-    data = {"inputs": prompt}
-    response = requests.post(API_URL, headers=headers, json=data)
-    return response.json()
-
-@app.get("/generate_population")
-def generate_population():
-    # Constructing the prompt
-    #prompt = "Generate 50 sets of parameters for a simulation involving car location, energy usage rate, age, home location, and work location."
-    result = fetch_from_huggingface(prompt)
-    print(result)
-    resstr = json.dumps(result)
-    with open("out.json", "w") as f:
-        f.write(resstr)
-    return result
 
 prompt = """
 Generate five distinct test inputs for a Java simulation where cars and persons commute in a 1D world, each in a JSON-like key-value pair format. Ensure each input potentially causes simulation failures by making the car's energy drop below 0 or rise above 100, or by moving the car's location outside the 0 to 100 range. Each input should include:
@@ -103,12 +83,8 @@ Please provide the results as a list of JSON objects, each representing a set of
 # Focus on generating intelligent yet random edge cases that challenge the simulation's ability to handle extreme commuting scenarios without running out of energy. Do not include the input prompt in the output.
 # """
 
-def get_model_response(prompt):
-    response = requests.post(API_URL, headers=headers, json={"inputs": prompt})
-    return response.json()
-
 import google.generativeai as genai
-GOOGLE_API_KEY = 'AIzaSyDTPoZnII_ZHFkj1Sf_4zoaquvOwy0RRoY'
+GOOGLE_API_KEY = 'API_KEY_HERE'
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-pro')
 
@@ -127,6 +103,6 @@ def generate_data():
             except json.JSONDecodeError as e:
                 print(f"Error parsing JSON: {e}")
                 break
-    with open("initial_population.json", "w") as f:
+    with open("/home/yatharth/TestAssignment/app/initial_population.json", "w") as f:
         json.dump(results, f, indent=4)
     return results

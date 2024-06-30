@@ -5,6 +5,10 @@ import org.jetbrains.person.Person;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -79,15 +83,35 @@ class GeneticAlgorithm {
         return bestChromosomeEver;
     }
 
-    public void initialize(boolean useJsonFlag) {
-        this.useJson = useJsonFlag;
-        this.resultFilename = useJson ? "result_from_ML.json" : "result_from_random.json";
+    public void initialize(boolean useJson) {
         if (useJson) {
-            initializePopulationFromJson();
+            try {
+                // Call the API to generate the JSON file
+                callApiToGenerateJson();
+                // Initialize the population from the updated JSON file
+                System.out.println("Initializing population from JSON");
+                initializePopulationFromJson();
+            } catch (Exception e) {
+                e.printStackTrace();
+                // Fallback to random initialization if there's an error
+                initializePopulation();
+            }
         } else {
+            // Regular random initialization
             initializePopulation();
         }
     }
+
+    private void callApiToGenerateJson() throws IOException, InterruptedException {
+    HttpClient client = HttpClient.newHttpClient();
+    HttpRequest request = HttpRequest.newBuilder()
+        .uri(URI.create("http://127.0.0.1:8000/generate-data"))
+        .GET()  // Assuming a GET request is sufficient to trigger JSON generation
+        .build();
+    
+    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    // Optional: Check response status and handle errors
+}
 
    private void initializePopulationFromJson() {
     try {
@@ -273,6 +297,8 @@ class GeneticAlgorithm {
 
     public void saveAllResults(List<RunResult> results){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        System.out.println("Saving all results...");
+        System.out.println(results);
         String allResultsJson = gson.toJson(results);
         try {
             Files.write(Paths.get(resultFilename), allResultsJson.getBytes());

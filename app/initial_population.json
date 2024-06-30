@@ -1,297 +1,262 @@
 [
     {
-        "initial_car_location": 98.0,
-        "car_energy_usage_rate": 0.02,
+        "initial_car_location": 5.0,
+        "car_energy_usage_rate": 0.2,
         "person_age": 25,
-        "home_location": 95.0,
-        "work_location": 5.0
-    },
-    {
-        "initial_car_location": 2.0,
-        "car_energy_usage_rate": 0.15,
-        "person_age": 53,
-        "home_location": 98.0,
-        "work_location": 2.0
-    },
-    {
-        "initial_car_location": 50.0,
-        "car_energy_usage_rate": 0.01,
-        "person_age": 62,
         "home_location": 1.0,
         "work_location": 99.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.2,
-        "person_age": 37,
-        "home_location": 95.0,
-        "work_location": 5.0
-    },
-    {
-        "initial_car_location": 95.0,
-        "car_energy_usage_rate": 0.03,
-        "person_age": 48,
-        "home_location": 5.0,
-        "work_location": 95.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.06,
-        "person_age": 25,
-        "home_location": 95.0,
-        "work_location": 5.0
-    },
-    {
-        "initial_car_location": 98.0,
-        "car_energy_usage_rate": 0.08,
-        "person_age": 50,
-        "home_location": 5.0,
-        "work_location": 98.0
-    },
-    {
-        "initial_car_location": 50.0,
-        "car_energy_usage_rate": 0.15,
-        "person_age": 32,
-        "home_location": 10.0,
-        "work_location": 90.0
-    },
-    {
-        "initial_car_location": 2.0,
-        "car_energy_usage_rate": 0.02,
-        "person_age": 65,
-        "home_location": 98.0,
-        "work_location": 2.0
-    },
-    {
-        "initial_car_location": 97.0,
-        "car_energy_usage_rate": 0.12,
-        "person_age": 42,
-        "home_location": 2.0,
-        "work_location": 97.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.2,
-        "person_age": 25,
-        "home_location": 95.0,
-        "work_location": 2.0
-    },
-    {
-        "initial_car_location": 98.0,
-        "car_energy_usage_rate": 0.15,
-        "person_age": 50,
-        "home_location": 5.0,
-        "work_location": 90.0
-    },
-    {
-        "initial_car_location": 45.0,
-        "car_energy_usage_rate": 0.3,
-        "person_age": 32,
-        "home_location": 1.0,
-        "work_location": 99.0
-    },
-    {
-        "initial_car_location": 2.0,
-        "car_energy_usage_rate": 0.25,
-        "person_age": 67,
-        "home_location": 98.0,
-        "work_location": 5.0
-    },
-    {
-        "initial_car_location": 80.0,
-        "car_energy_usage_rate": 0.1,
-        "person_age": 41,
-        "home_location": 10.0,
-        "work_location": 95.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.2,
-        "person_age": 25,
-        "home_location": 2.0,
-        "work_location": 98.0
     },
     {
         "initial_car_location": 95.0,
         "car_energy_usage_rate": 0.15,
         "person_age": 50,
         "home_location": 98.0,
-        "work_location": 5.0
+        "work_location": 2.0
     },
     {
         "initial_car_location": 50.0,
         "car_energy_usage_rate": 0.3,
         "person_age": 32,
-        "home_location": 1.0,
-        "work_location": 99.0
+        "home_location": 10.0,
+        "work_location": 90.0
     },
     {
         "initial_car_location": 20.0,
         "car_energy_usage_rate": 0.1,
-        "person_age": 60,
-        "home_location": 90.0,
-        "work_location": 10.0
+        "person_age": 65,
+        "home_location": 1.0,
+        "work_location": 21.0
     },
     {
         "initial_car_location": 80.0,
         "car_energy_usage_rate": 0.25,
-        "person_age": 42,
-        "home_location": 5.0,
-        "work_location": 95.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.06,
-        "person_age": 25,
-        "home_location": 98.0,
-        "work_location": 2.0
-    },
-    {
-        "initial_car_location": 95.0,
-        "car_energy_usage_rate": 0.07,
-        "person_age": 50,
-        "home_location": 5.0,
-        "work_location": 97.0
-    },
-    {
-        "initial_car_location": 50.0,
-        "car_energy_usage_rate": 0.01,
-        "person_age": 62,
-        "home_location": 1.0,
+        "person_age": 43,
+        "home_location": 79.0,
         "work_location": 99.0
     },
     {
-        "initial_car_location": 2.0,
-        "car_energy_usage_rate": 0.12,
-        "person_age": 33,
-        "home_location": 90.0,
-        "work_location": 5.0
-    },
-    {
-        "initial_car_location": 98.0,
-        "car_energy_usage_rate": 0.15,
-        "person_age": 47,
-        "home_location": 2.0,
-        "work_location": 95.0
-    },
-    {
         "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.8,
+        "car_energy_usage_rate": 0.2,
         "person_age": 25,
         "home_location": 95.0,
         "work_location": 5.0
-    },
-    {
-        "initial_car_location": 98.0,
-        "car_energy_usage_rate": 0.1,
-        "person_age": 50,
-        "home_location": 5.0,
-        "work_location": 98.0
-    },
-    {
-        "initial_car_location": 50.0,
-        "car_energy_usage_rate": 0.05,
-        "person_age": 32,
-        "home_location": 1.0,
-        "work_location": 99.0
-    },
-    {
-        "initial_car_location": 2.0,
-        "car_energy_usage_rate": 1.2,
-        "person_age": 65,
-        "home_location": 90.0,
-        "work_location": 2.0
     },
     {
         "initial_car_location": 99.0,
-        "car_energy_usage_rate": 0.9,
-        "person_age": 48,
-        "home_location": 10.0,
-        "work_location": 99.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.2,
-        "person_age": 25,
-        "home_location": 1.0,
-        "work_location": 99.0
-    },
-    {
-        "initial_car_location": 95.0,
-        "car_energy_usage_rate": 0.15,
-        "person_age": 50,
-        "home_location": 98.0,
-        "work_location": 2.0
-    },
-    {
-        "initial_car_location": 50.0,
-        "car_energy_usage_rate": 0.3,
-        "person_age": 32,
-        "home_location": 10.0,
-        "work_location": 90.0
-    },
-    {
-        "initial_car_location": 20.0,
-        "car_energy_usage_rate": 0.1,
-        "person_age": 65,
-        "home_location": 5.0,
-        "work_location": 95.0
-    },
-    {
-        "initial_car_location": 80.0,
-        "car_energy_usage_rate": 0.25,
-        "person_age": 48,
-        "home_location": 92.0,
-        "work_location": 8.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.2,
-        "person_age": 25,
-        "home_location": 95.0,
-        "work_location": 0.0
-    },
-    {
-        "initial_car_location": 98.0,
         "car_energy_usage_rate": 0.05,
         "person_age": 50,
-        "home_location": 5.0,
-        "work_location": 95.0
+        "home_location": 0.0,
+        "work_location": 99.0
     },
     {
         "initial_car_location": 50.0,
         "car_energy_usage_rate": 0.15,
         "person_age": 35,
+        "home_location": 10.0,
+        "work_location": 90.0
+    },
+    {
+        "initial_car_location": 20.0,
+        "car_energy_usage_rate": 0.3,
+        "person_age": 60,
+        "home_location": 80.0,
+        "work_location": 20.0
+    },
+    {
+        "initial_car_location": 80.0,
+        "car_energy_usage_rate": 0.25,
+        "person_age": 42,
+        "home_location": 5.0,
+        "work_location": 95.0
+    },
+    {
+        "initial_car_location": 5.0,
+        "car_energy_usage_rate": 0.2,
+        "person_age": 25,
+        "home_location": 98.0,
+        "work_location": 2.0
+    },
+    {
+        "initial_car_location": 95.0,
+        "car_energy_usage_rate": 0.1,
+        "person_age": 50,
+        "home_location": 5.0,
+        "work_location": 97.0
+    },
+    {
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.05,
+        "person_age": 32,
+        "home_location": 2.0,
+        "work_location": 99.0
+    },
+    {
+        "initial_car_location": 10.0,
+        "car_energy_usage_rate": 0.15,
+        "person_age": 65,
+        "home_location": 95.0,
+        "work_location": 5.0
+    },
+    {
+        "initial_car_location": 80.0,
+        "car_energy_usage_rate": 0.25,
+        "person_age": 43,
+        "home_location": 1.0,
+        "work_location": 98.0
+    },
+    {
+        "initial_car_location": 5.0,
+        "car_energy_usage_rate": 0.15,
+        "person_age": 25,
+        "home_location": 2.0,
+        "work_location": 98.0
+    },
+    {
+        "initial_car_location": 95.0,
+        "car_energy_usage_rate": 0.05,
+        "person_age": 50,
+        "home_location": 98.0,
+        "work_location": 2.0
+    },
+    {
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.25,
+        "person_age": 32,
+        "home_location": 1.0,
+        "work_location": 99.0
+    },
+    {
+        "initial_car_location": 2.0,
+        "car_energy_usage_rate": 0.1,
+        "person_age": 65,
+        "home_location": 95.0,
+        "work_location": 5.0
+    },
+    {
+        "initial_car_location": 98.0,
+        "car_energy_usage_rate": 0.2,
+        "person_age": 42,
+        "home_location": 5.0,
+        "work_location": 90.0
+    },
+    {
+        "initial_car_location": 5.0,
+        "car_energy_usage_rate": 0.2,
+        "person_age": 25,
+        "home_location": 98.0,
+        "work_location": 2.0
+    },
+    {
+        "initial_car_location": 95.0,
+        "car_energy_usage_rate": 0.15,
+        "person_age": 50,
+        "home_location": 5.0,
+        "work_location": 97.0
+    },
+    {
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.3,
+        "person_age": 32,
+        "home_location": 1.0,
+        "work_location": 99.0
+    },
+    {
+        "initial_car_location": 2.0,
+        "car_energy_usage_rate": 0.1,
+        "person_age": 62,
+        "home_location": 95.0,
+        "work_location": 1.0
+    },
+    {
+        "initial_car_location": 99.0,
+        "car_energy_usage_rate": 0.25,
+        "person_age": 47,
+        "home_location": 2.0,
+        "work_location": 98.0
+    },
+    {
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.2,
+        "person_age": 25,
+        "home_location": 10.0,
+        "work_location": 90.0
+    },
+    {
+        "initial_car_location": 5.0,
+        "car_energy_usage_rate": 0.05,
+        "person_age": 50,
+        "home_location": 95.0,
+        "work_location": 5.0
+    },
+    {
+        "initial_car_location": 98.0,
+        "car_energy_usage_rate": 0.15,
+        "person_age": 32,
+        "home_location": 2.0,
+        "work_location": 98.0
+    },
+    {
+        "initial_car_location": 1.0,
+        "car_energy_usage_rate": 0.1,
+        "person_age": 60,
+        "home_location": 99.0,
+        "work_location": 1.0
+    },
+    {
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.25,
+        "person_age": 40,
         "home_location": 0.0,
         "work_location": 100.0
     },
     {
-        "initial_car_location": 2.0,
-        "car_energy_usage_rate": 0.25,
-        "person_age": 60,
-        "home_location": 90.0,
-        "work_location": 10.0
-    },
-    {
-        "initial_car_location": 97.0,
-        "car_energy_usage_rate": 0.1,
-        "person_age": 42,
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.2,
+        "person_age": 25,
         "home_location": 10.0,
         "work_location": 90.0
     },
     {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.8,
-        "person_age": 25,
-        "home_location": 2.0,
+        "initial_car_location": 95.0,
+        "car_energy_usage_rate": 0.05,
+        "person_age": 50,
+        "home_location": 5.0,
         "work_location": 98.0
     },
     {
-        "initial_car_location": 95.0,
+        "initial_car_location": 2.0,
+        "car_energy_usage_rate": 0.15,
+        "person_age": 35,
+        "home_location": 95.0,
+        "work_location": 1.0
+    },
+    {
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.01,
+        "person_age": 60,
+        "home_location": 2.0,
+        "work_location": 99.0
+    },
+    {
+        "initial_car_location": 10.0,
+        "car_energy_usage_rate": 0.25,
+        "person_age": 42,
+        "home_location": 90.0,
+        "work_location": 5.0
+    },
+    {
+        "initial_car_location": 5.0,
+        "car_energy_usage_rate": 0.2,
+        "person_age": 25,
+        "home_location": 95.0,
+        "work_location": 2.0
+    },
+    {
+        "initial_car_location": 98.0,
         "car_energy_usage_rate": 0.1,
         "person_age": 50,
-        "home_location": 98.0,
-        "work_location": 2.0
+        "home_location": 5.0,
+        "work_location": 90.0
     },
     {
         "initial_car_location": 50.0,
@@ -302,51 +267,86 @@
     },
     {
         "initial_car_location": 2.0,
-        "car_energy_usage_rate": 1.2,
+        "car_energy_usage_rate": 0.3,
         "person_age": 65,
-        "home_location": 90.0,
+        "home_location": 98.0,
         "work_location": 5.0
-    },
-    {
-        "initial_car_location": 98.0,
-        "car_energy_usage_rate": 0.9,
-        "person_age": 42,
-        "home_location": 5.0,
-        "work_location": 95.0
-    },
-    {
-        "initial_car_location": 5.0,
-        "car_energy_usage_rate": 0.2,
-        "person_age": 25,
-        "home_location": 2,
-        "work_location": 98
     },
     {
         "initial_car_location": 95.0,
         "car_energy_usage_rate": 0.15,
+        "person_age": 40,
+        "home_location": 2.0,
+        "work_location": 90.0
+    },
+    {
+        "initial_car_location": 99.9,
+        "car_energy_usage_rate": 0.05,
+        "person_age": 25,
+        "home_location": 5.0,
+        "work_location": 98.0
+    },
+    {
+        "initial_car_location": 0.5,
+        "car_energy_usage_rate": 0.15,
         "person_age": 50,
-        "home_location": 98,
-        "work_location": 2
+        "home_location": 95.0,
+        "work_location": 1.0
     },
     {
         "initial_car_location": 50.0,
-        "car_energy_usage_rate": 0.05,
-        "person_age": 35,
-        "home_location": 1,
-        "work_location": 99
+        "car_energy_usage_rate": 0.02,
+        "person_age": 33,
+        "home_location": 1.0,
+        "work_location": 99.0
     },
     {
-        "initial_car_location": 20.0,
-        "car_energy_usage_rate": 0.3,
+        "initial_car_location": 25.0,
+        "car_energy_usage_rate": 0.1,
         "person_age": 62,
-        "home_location": 15,
-        "work_location": 5
+        "home_location": 0.0,
+        "work_location": 100.0
+    },
+    {
+        "initial_car_location": 75.0,
+        "car_energy_usage_rate": 0.07,
+        "person_age": 41,
+        "home_location": 99.5,
+        "work_location": 0.5
+    },
+    {
+        "initial_car_location": 50.0,
+        "car_energy_usage_rate": 0.2,
+        "person_age": 25,
+        "home_location": 10.0,
+        "work_location": 90.0
+    },
+    {
+        "initial_car_location": 95.0,
+        "car_energy_usage_rate": 0.1,
+        "person_age": 50,
+        "home_location": 5.0,
+        "work_location": 98.0
+    },
+    {
+        "initial_car_location": 2.0,
+        "car_energy_usage_rate": 0.3,
+        "person_age": 32,
+        "home_location": 95.0,
+        "work_location": 1.0
     },
     {
         "initial_car_location": 80.0,
-        "car_energy_usage_rate": 0.25,
-        "person_age": 47,
-        "home_location": 95,
-        "work_location": 5
+        "car_energy_usage_rate": 0.05,
+        "person_age": 67,
+        "home_location": 2.0,
+        "work_location": 99.0
+    },
+    {
+        "initial_car_location": 5.0,
+        "car_energy_usage_rate": 0.15,
+        "person_age": 41,
+        "home_location": 90.0,
+        "work_location": 2.0
     }
 ]
