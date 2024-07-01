@@ -22,17 +22,6 @@ class TestResult {
 public class TestTemplates {
 
     @Test
-    public TestResult fixedPetrolCarTest(double location, double energyRate, int age, double homeLocation, double workLocation) {
-        Car car = new PetrolCar(location, energyRate);
-        Person person = new Person(age, homeLocation, workLocation, car);
-        person.goToWork();
-        person.goToHome();
-        person.goToWork();
-        person.goToHome();
-        return new TestResult(car.getLocation(), car.getEnergyValue());
-    }
-
-    @Test
     public TestResult fixedPetrolCarTest(Chromosome chromosome) {
         Car car = new PetrolCar(chromosome.location, chromosome.energyUsageRate);
         Person person = new Person(chromosome.age, chromosome.homeLocation, chromosome.workLocation, car);

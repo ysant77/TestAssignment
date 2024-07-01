@@ -1,9 +1,5 @@
 package org.jetbrains.testing;
 
-import org.jetbrains.car.*;
-import org.jetbrains.person.Person;
-import org.junit.jupiter.api.Test;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -12,12 +8,9 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import com.google.gson.Gson; // Google JSON library
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -70,7 +63,6 @@ class GeneticAlgorithm {
     private int bestGeneration = 0;
     private int generationCount = 0;
     private TestTemplates testTemplates = new TestTemplates();
-    private boolean useJson;
     private String resultFilename;
 
     public double getBestFitnessEver() {
@@ -106,11 +98,11 @@ class GeneticAlgorithm {
     HttpClient client = HttpClient.newHttpClient();
     HttpRequest request = HttpRequest.newBuilder()
         .uri(URI.create("http://127.0.0.1:8000/generate-data"))
-        .GET()  // Assuming a GET request is sufficient to trigger JSON generation
+        .GET()  // GET request to trigger JSON generation
         .build();
     
-    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-    // Optional: Check response status and handle errors
+    client.send(request, HttpResponse.BodyHandlers.ofString());
+    
 }
 
    private void initializePopulationFromJson() {
@@ -179,13 +171,7 @@ class GeneticAlgorithm {
                          .orElse(null);
     }
     
-    // public double calculateFitness(Chromosome chromosome) {
-    //     TestResult result = testTemplates.fixedPetrolCarTest(chromosome);
-    //     double fitness = 0;
-    //     if (result.location < 0 || result.location > 100) fitness += Math.abs(result.location - 50) - 50;
-    //     if (result.energy < 0 || result.energy > 100) fitness += Math.abs(result.energy - 50) - 50;
-    //     return fitness;
-    // }
+    
     
     public double calculateFitness(Chromosome chromosome) {
         try {
@@ -284,7 +270,7 @@ class GeneticAlgorithm {
     }
 
     private void saveResults() {
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String resultJson = gson.toJson(bestChromosomeEver);
         try {
             Files.write(Paths.get(resultFilename), resultJson.getBytes());
