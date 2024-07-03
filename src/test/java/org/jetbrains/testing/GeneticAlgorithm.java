@@ -1,8 +1,5 @@
 package org.jetbrains.testing;
 
-import org.jetbrains.car.*;
-import org.jetbrains.person.Person;
-import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.net.URI;
@@ -12,12 +9,9 @@ import java.net.http.HttpResponse;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import com.google.gson.Gson; // Google JSON library
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -72,6 +66,7 @@ class GeneticAlgorithm {
     private TestTemplates testTemplates = new TestTemplates();
     private boolean useJson;
     private String resultFilename;
+    private boolean lastTestCausedException = false;
 
     public double getBestFitnessEver() {
         return bestFitnessEver;
@@ -179,32 +174,26 @@ class GeneticAlgorithm {
                          .orElse(null);
     }
     
-    // public double calculateFitness(Chromosome chromosome) {
-    //     TestResult result = testTemplates.fixedPetrolCarTest(chromosome);
-    //     double fitness = 0;
-    //     if (result.location < 0 || result.location > 100) fitness += Math.abs(result.location - 50) - 50;
-    //     if (result.energy < 0 || result.energy > 100) fitness += Math.abs(result.energy - 50) - 50;
-    //     return fitness;
-    // }
     
     public double calculateFitness(Chromosome chromosome) {
         try {
             TestResult result = testTemplates.fixedPetrolCarTest(chromosome);
             double fitness = 0;
             if (result.location < 0 || result.location > 100) {
-                fitness += Math.abs(result.location - 50) - 50;
+                fitness += 50 - Math.abs(result.location - 50);
             }
             if (result.energy < 0 || result.energy > 100) {
-                fitness += Math.abs(result.energy - 50) - 50;
+                fitness += 50 - Math.abs(result.energy - 50);
             }
-            chromosome.testResult = result;
-            //System.out.println("Calculated fitness: " + fitness);  // Debugging output
-            return fitness;
+            chromosome.testResult = result;  // Store test result in chromosome
+            this.lastTestCausedException = false;  // Reset exception flag
+            return fitness;  // Return calculated fitness
         } catch (Exception e) {
+            // Exception handling
             System.err.println("Error calculating fitness: " + e.getMessage());
             System.err.println("Chromosome: " + chromosome);
-            System.err.println("TestTemplates: " + testTemplates.fixedPetrolCarTest(chromosome));
-            return Double.MAX_VALUE;  // Ensure a fallback value that indicates error
+            this.lastTestCausedException = true;  // Set exception flag
+            return 1000;  // Use a high but manageable value for fitness to indicate error
         }
     }
     
@@ -215,7 +204,11 @@ class GeneticAlgorithm {
         int age = (parent1.age + parent2.age) / 2;
         double homeLocation = (parent1.homeLocation + parent2.homeLocation) / 2;
         double workLocation = (parent1.workLocation + parent2.workLocation) / 2;
-    
+        if (this.lastTestCausedException){
+            location += (Math.random() - 0.5) * 10;  // Increase variability near boundaries
+            homeLocation += (Math.random() - 0.5) * 10;
+            workLocation += (Math.random() - 0.5) * 10;
+        }
         // Clamping the values to ensure they remain within realistic bounds
         location = Math.min(Math.max(location, 0), 100);
         energyUsageRate = Math.min(Math.max(energyUsageRate, 0.1), 1.0); // Assuming 0.1 to 1.0 is the realistic range for energy usage rate
@@ -227,8 +220,10 @@ class GeneticAlgorithm {
     
     
     public void mutate(Chromosome chromosome) {
-        chromosome.location += random.nextGaussian();
-        chromosome.energyUsageRate += random.nextGaussian() * 0.1;  // Small mutation
+        double mutationIntensity = this.lastTestCausedException ? 0.2 : 0.1; // Increase mutation intensity if an exception occurred
+
+        chromosome.location += random.nextGaussian() * mutationIntensity;
+        chromosome.energyUsageRate += random.nextGaussian() * mutationIntensity; 
     
         // Clamping to ensure the values remain within valid ranges
         chromosome.location = Math.min(Math.max(chromosome.location, 0), 100);
@@ -277,23 +272,8 @@ class GeneticAlgorithm {
             generationCount++;
         }
 
-        //System.out.println("Best Ever Fitness: " + bestFitnessEver + " from Generation " + bestGeneration);
-        //System.out.println("Best Ever Chromosome: " + bestChromosomeEver);
-        //System.out.println("Test Result: " + bestChromosomeEver.testResult);
-        //saveResults();
     }
 
-    private void saveResults() {
-        Gson gson = new Gson();
-        String resultJson = gson.toJson(bestChromosomeEver);
-        try {
-            Files.write(Paths.get(resultFilename), resultJson.getBytes());
-            System.out.println("Best Ever Fitness: " + bestFitnessEver + " from Generation " + bestGeneration);
-            System.out.println("Results saved to " + resultFilename);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void saveAllResults(List<RunResult> results){
         Gson gson = new GsonBuilder().setPrettyPrinting().create();

@@ -8,7 +8,7 @@ public abstract class Car {
     private double energyUsageRate;
 
     protected int energyThreshold;
-
+    
 
     public Car(double location, double energyUsageRate) {
         this.location = location;
@@ -30,6 +30,12 @@ public abstract class Car {
         double distance = destination-this.location;
         this.energy.reduceEnergy(distance*energyUsageRate);
         this.location = destination;
+        if (this.energy.getEnergy() < 0 || this.energy.getEnergy() > 100){
+            throw new IllegalStateException("Energy level is invalid");
+        }
+        if (this.location < 0 || this.location > 100){
+            throw new IllegalStateException("Location is invalid");
+        }
     }
 
     public void refuel() {
