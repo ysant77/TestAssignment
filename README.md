@@ -50,7 +50,15 @@ nohup uvicorn main --host 0.0.0.0 --port 8000 &
 
 ### JSON Data Generation
 
-The FastAPI server will automatically save the generated population data to `/home/yatharth/TestAssignment/app/initial_population.json`. Make sure this path is accessible and writable. You may need to adjust the path depending on your directory structure or permissions.
+The FastAPI server will automatically save the generated population data to `/home/yatharth/TestAssignment/app/initial_population.json`. Make sure this path is accessible and writable. You may need to adjust the path depending on your directory structure or permissions. 
+
+This path needs to be updated in the GeneticAlgorithm.java line number 113. The code line is as follows:
+
+String jsonContent = new String(Files.readAllBytes(Paths.get("/home/yatharth/TestAssignment/app/initial_population.json")));
+
+A similar update needs to be made in the main.py file, line number 40. The code line is as follows:
+with open("/home/yatharth/TestAssignment/app/initial_population.json", "w") as f:
+
 
 ### Integration
 
