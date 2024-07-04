@@ -27,8 +27,6 @@ import com.google.gson.JsonObject;
         this.bestFitness = bestFitness;
         this.bestGeneration = bestGeneration;
     }
-
-    // Getters and setters if necessary
 }
 
 
@@ -47,7 +45,7 @@ class Chromosome {
         this.age = age;
         this.homeLocation = homeLocation;
         this.workLocation = workLocation;
-        this.fitness = Double.MAX_VALUE;  // Initialize with a large value
+        this.fitness = Double.MAX_VALUE;  // Initialize fitness with a large value
     }
     public String toString() {
         return "Location: " + location + ", Energy Usage Rate: " + energyUsageRate + ", Age: " + age + ", Home Location: " + homeLocation + ", Work Location: " + workLocation;
@@ -145,7 +143,7 @@ class GeneticAlgorithm {
     public void initializePopulation() {
         for (int i = 0; i < POPULATION_SIZE; i++) {
             double location = Math.min(100, Math.max(0, random.nextDouble() * 100));
-            double energyUsageRate = 0.1 + random.nextDouble() * 0.9;  // Keep between 1 and 10
+            double energyUsageRate = 0.1 + random.nextDouble() * 0.9;  // Clipping the value between 0 and 1
             int age = 18 + random.nextInt(50);  // Age between 18 and 67
             double homeLocation = random.nextDouble() * 100;
             double workLocation;
@@ -202,11 +200,10 @@ class GeneticAlgorithm {
         double homeLocation = (parent1.homeLocation + parent2.homeLocation) / 2;
         double workLocation = (parent1.workLocation + parent2.workLocation) / 2;
     
-        // Clamping the values to ensure they remain within realistic bounds
-        location = Math.min(Math.max(location, 0), 100);
-        energyUsageRate = Math.min(Math.max(energyUsageRate, 0.1), 1.0); // Assuming 0.1 to 1.0 is the realistic range for energy usage rate
-        homeLocation = Math.min(Math.max(homeLocation, 0), 100);
-        workLocation = Math.min(Math.max(workLocation, 0), 100);
+        location = Math.min(Math.max(location, 0), 100); // Clipping value between 0 and 100
+        energyUsageRate = Math.min(Math.max(energyUsageRate, 0.1), 1.0); // Clipping value between 0.0 and 1.0
+        homeLocation = Math.min(Math.max(homeLocation, 0), 100); // Clipping value between 0 and 100
+        workLocation = Math.min(Math.max(workLocation, 0), 100); // Clipping value between 0 and 100
     
         return new Chromosome(location, energyUsageRate, age, homeLocation, workLocation);
     }
@@ -233,23 +230,12 @@ class GeneticAlgorithm {
                 bestGeneration = generationCount;
             }
         }
-    
-        // Find the chromosome with the highest fitness in the current generation
-        Chromosome bestOfGeneration = population.stream()
-                                                .max(Comparator.comparing(c -> c.fitness))  // Change to max to find the highest fitness
-                                                .orElse(null);
-    
-        if (bestOfGeneration != null) {
-            //System.out.println("Generation " + generationCount + " - Best Fitness: " + bestOfGeneration.fitness);
-            //System.out.println("Best Chromosome: " + bestOfGeneration);
-        }
     }
     
 
     public void run() {
-        //initializePopulation();
         long startTime = System.currentTimeMillis();
-        while ((System.currentTimeMillis() - startTime) < 30000) { // 30 seconds
+        while ((System.currentTimeMillis() - startTime) < 30000) { // 30 seconds time limit
             evaluatePopulation();  // Evaluate each new generation
             List<Chromosome> newPopulation = new ArrayList<>();
             while (newPopulation.size() < POPULATION_SIZE) {
@@ -261,23 +247,6 @@ class GeneticAlgorithm {
             }
             population = newPopulation;
             generationCount++;
-        }
-
-        //System.out.println("Best Ever Fitness: " + bestFitnessEver + " from Generation " + bestGeneration);
-        //System.out.println("Best Ever Chromosome: " + bestChromosomeEver);
-        //System.out.println("Test Result: " + bestChromosomeEver.testResult);
-        //saveResults();
-    }
-
-    private void saveResults() {
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String resultJson = gson.toJson(bestChromosomeEver);
-        try {
-            Files.write(Paths.get(resultFilename), resultJson.getBytes());
-            System.out.println("Best Ever Fitness: " + bestFitnessEver + " from Generation " + bestGeneration);
-            System.out.println("Results saved to " + resultFilename);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
