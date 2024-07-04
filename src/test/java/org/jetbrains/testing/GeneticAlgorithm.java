@@ -28,8 +28,6 @@ import com.google.gson.JsonObject;
         this.bestFitness = bestFitness;
         this.bestGeneration = bestGeneration;
     }
-
-    // Getters and setters if necessary
 }
 
 
@@ -104,8 +102,8 @@ class GeneticAlgorithm {
         .GET()  // Assuming a GET request is sufficient to trigger JSON generation
         .build();
     
-    HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-    // Optional: Check response status and handle errors
+    client.send(request, HttpResponse.BodyHandlers.ofString());
+    
 }
 
    private void initializePopulationFromJson() {
@@ -148,7 +146,7 @@ class GeneticAlgorithm {
     public void initializePopulation() {
         for (int i = 0; i < POPULATION_SIZE; i++) {
             double location = Math.min(100, Math.max(0, random.nextDouble() * 100));
-            double energyUsageRate = 0.1 + random.nextDouble() * 0.9;  // Keep between 1 and 10
+            double energyUsageRate = 0.1 + random.nextDouble() * 0.9;  // Clipping the value between 0 and 1
             int age = 18 + random.nextInt(50);  // Age between 18 and 67
             double homeLocation = random.nextDouble() * 100;
             double workLocation;
@@ -241,16 +239,6 @@ class GeneticAlgorithm {
                 bestChromosomeEver = chromosome;
                 bestGeneration = generationCount;
             }
-        }
-    
-        // Find the chromosome with the highest fitness in the current generation
-        Chromosome bestOfGeneration = population.stream()
-                                                .max(Comparator.comparing(c -> c.fitness))  // Change to max to find the highest fitness
-                                                .orElse(null);
-    
-        if (bestOfGeneration != null) {
-            //System.out.println("Generation " + generationCount + " - Best Fitness: " + bestOfGeneration.fitness);
-            //System.out.println("Best Chromosome: " + bestOfGeneration);
         }
     }
     
