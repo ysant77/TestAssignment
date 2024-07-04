@@ -36,6 +36,7 @@ def generate_data():
             except json.JSONDecodeError as e:
                 print(f"Error parsing JSON: {e}")
                 break
+    # Need to write the results to a correct file path (Refer to README.md for more details)
     with open("/home/yatharth/TestAssignment/app/initial_population.json", "w") as f:
         json.dump(results, f, indent=4)
     return results

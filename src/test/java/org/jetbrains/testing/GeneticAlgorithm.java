@@ -106,6 +106,7 @@ class GeneticAlgorithm {
    private void initializePopulationFromJson() {
     try {
         // Read JSON content from file
+        //Change the path to the correct JSON path here (refer to README.md for more details)
         String jsonContent = new String(Files.readAllBytes(Paths.get("/home/yatharth/TestAssignment/app/initial_population.json")));
 
         // Create Gson instance
